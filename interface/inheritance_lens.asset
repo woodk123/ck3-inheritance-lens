@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_inheritance_lens_icon"
+        texturefile = "gfx/interface/icons/map_modes/inheritance_lens.dds"
+    }
+}

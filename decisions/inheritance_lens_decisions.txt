@@ -1,0 +1,27 @@
+player_decisions = {
+    inheritance_lens_preview = {
+        picture = portrait_eventwindow
+        major = no
+        cooldown = { months = 1 }
+        ai_target_filter = self
+        desc = INHERITANCE_LENS_DECISION_DESC
+        selection_tooltip = INHERITANCE_LENS_DECISION_SELECTION
+        confirm_text = INHERITANCE_LENS_DECISION_CONFIRM
+
+        is_shown = {
+            is_player = yes
+        }
+
+        is_valid = {
+            is_player = yes
+        }
+
+        effect = {
+            trigger_effect = {
+                effect = {
+                    inheritance_lens_calculate_preview_effect = yes
+                }
+            }
+        }
+    }
+}
