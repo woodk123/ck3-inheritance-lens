@@ -1,0 +1,81 @@
+containerWindowType = {
+    name = "inheritance_lens_panel"
+    size = { width = 620 height = 680 }
+    position = { x = 0.5 y = 0.5 }
+    moveable = yes
+    draggable = yes
+    dontRender = "not ShowInheritanceLensPanel"
+
+    background = {
+        name = "panel_bg"
+        spriteType = "GFX_standard_background"
+    }
+
+    instantTextBoxType = {
+        name = "title"
+        position = { x = 40 y = 30 }
+        font = "cg_24b"
+        text = "INHERITANCE_LENS_PANEL_TITLE"
+    }
+
+    buttonType = {
+        name = "refresh_button"
+        position = { x = 420 y = 25 }
+        text = "INHERITANCE_LENS_REFRESH"
+        tooltip = "INHERITANCE_LENS_REFRESH_TT"
+        on_click = "PreviewSuccession"
+    }
+
+    checkboxType = {
+        name = "filter_changes"
+        position = { x = 40 y = 80 }
+        text = "INHERITANCE_LENS_FILTER_CHANGES"
+        tooltip = "INHERITANCE_LENS_FILTER_CHANGES_TT"
+    }
+
+    checkboxType = {
+        name = "filter_elective"
+        position = { x = 240 y = 80 }
+        text = "INHERITANCE_LENS_FILTER_ELECTIVE"
+        tooltip = "INHERITANCE_LENS_FILTER_ELECTIVE_TT"
+    }
+
+    checkboxType = {
+        name = "filter_high_tier"
+        position = { x = 420 y = 80 }
+        text = "INHERITANCE_LENS_FILTER_HIGH_TIER"
+        tooltip = "INHERITANCE_LENS_FILTER_HIGH_TIER_TT"
+    }
+
+    listboxType = {
+        name = "preview_entries"
+        position = { x = 40 y = 130 }
+        size = { width = 540 height = 460 }
+        orientation = vertical
+        spacing = 10
+    }
+
+    buttonType = {
+        name = "open_laws"
+        position = { x = 40 y = 610 }
+        text = "INHERITANCE_LENS_OPEN_LAWS"
+        tooltip = "INHERITANCE_LENS_OPEN_LAWS_TT"
+        on_click = "OpenSuccessionLawView"
+    }
+
+    buttonType = {
+        name = "open_elections"
+        position = { x = 230 y = 610 }
+        text = "INHERITANCE_LENS_OPEN_ELECTIONS"
+        tooltip = "INHERITANCE_LENS_OPEN_ELECTIONS_TT"
+        on_click = "OpenElectionView"
+    }
+
+    buttonType = {
+        name = "open_grant"
+        position = { x = 420 y = 610 }
+        text = "INHERITANCE_LENS_OPEN_GRANT"
+        tooltip = "INHERITANCE_LENS_OPEN_GRANT_TT"
+        on_click = "OpenGrantTitleView"
+    }
+}

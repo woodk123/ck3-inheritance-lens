@@ -1,0 +1,73 @@
+namespace = inheritance_lens
+
+inheritance_lens_calculate_preview_effect = {
+    # Main entry point for the Preview Succession button.
+    if = {
+        limit = { NOT = { has_global_variable = inheritance_lens_cache_generation } }
+        set_global_variable = { name = inheritance_lens_cache_generation value = 0 }
+    }
+    change_global_variable = { name = inheritance_lens_cache_generation add = 1 }
+
+    hidden_effect = {
+        save_scope_as = inheritance_lens_root_character
+        every_title = {
+            limit = {
+                holder = { is_player = yes }
+                tier = { value >= tier_county }
+            }
+            trigger_event = { id = inheritance_lens.100 days = 0 }
+        }
+    }
+}
+
+inheritance_lens_clear_cache_effect = {
+    # Clears stored predictions so the next preview recalculates.
+    clr_global_variable = inheritance_lens_cache_generation
+    every_player = { 
+        clr_character_flag = inheritance_lens_cache_ready
+    }
+}
+
+inheritance_lens_register_prediction_effect = {
+    # Called from event script to store preview data on the player character.
+    parameter = { title = title }
+    parameter = { heir = character }
+    parameter = { law = succession_law }
+    parameter = { warning = text }
+    parameter = { tooltip = text }
+
+    save_temporary_scope_as = { name = inheritance_lens_title_scope scope = parameter:title }
+    save_temporary_scope_as = { name = inheritance_lens_heir_scope scope = parameter:heir }
+
+    root = {
+        set_character_flag = inheritance_lens_cache_ready
+        add_character_array_element = {
+            name = inheritance_lens_preview_entries
+            value = {
+                title = scope:inheritance_lens_title_scope
+                heir = scope:inheritance_lens_heir_scope
+                succession_law = parameter:law
+                warning_loc = parameter:warning
+                tooltip_loc = parameter:tooltip
+            }
+        }
+    }
+}
+
+inheritance_lens_flag_risk_effect = {
+    # Helper effect that adds risk annotations to the preview cache entry.
+    parameter = { entry_index = int }
+    parameter = { warning = text }
+    parameter = { tooltip = text }
+
+    root = {
+        change_character_array_element = {
+            name = inheritance_lens_preview_entries
+            index = parameter:entry_index
+            add = {
+                warning_loc = parameter:warning
+                tooltip_loc = parameter:tooltip
+            }
+        }
+    }
+}

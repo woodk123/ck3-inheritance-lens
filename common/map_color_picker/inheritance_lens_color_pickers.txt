@@ -1,0 +1,18 @@
+map_color_picker = {
+    key = inheritance_lens_map_color_picker
+    use_title = yes
+    colors = {
+        color = hsv { 0.0 0.6 0.9 }
+        color = hsv { 0.08 0.6 0.9 }
+        color = hsv { 0.16 0.6 0.9 }
+        color = hsv { 0.24 0.6 0.9 }
+        color = hsv { 0.32 0.6 0.9 }
+        color = hsv { 0.40 0.6 0.9 }
+        color = hsv { 0.48 0.6 0.9 }
+        color = hsv { 0.56 0.6 0.9 }
+        color = hsv { 0.64 0.6 0.9 }
+        color = hsv { 0.72 0.6 0.9 }
+        color = hsv { 0.80 0.6 0.9 }
+        color = hsv { 0.88 0.6 0.9 }
+    }
+}

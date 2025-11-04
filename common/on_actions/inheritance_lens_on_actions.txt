@@ -1,0 +1,47 @@
+on_title_granted = {
+    effect = {
+        parameter:granted_title = {
+            set_title_flag = inheritance_lens_recent_grant
+        }
+        hidden_effect = { character_event = { id = inheritance_lens.001 } }
+    }
+}
+
+on_title_revoked = {
+    effect = {
+        parameter:revoked_title = {
+            set_title_flag = inheritance_lens_recent_revoke
+        }
+        hidden_effect = { character_event = { id = inheritance_lens.001 } }
+    }
+}
+
+on_succession_law_changed = {
+    effect = {
+        parameter:title = {
+            set_title_flag = inheritance_lens_recent_law_change
+        }
+        hidden_effect = { character_event = { id = inheritance_lens.001 } }
+    }
+}
+
+on_election_vote_changed = {
+    effect = {
+        parameter:title = {
+            set_title_flag = inheritance_lens_recent_election_update
+        }
+        # Captures shifts from legitimacy, merit, influence, court positions, and any other elective weight changes.
+        hidden_effect = { character_event = { id = inheritance_lens.001 } }
+    }
+}
+
+on_quarterly_pulse = {
+    effect = {
+        every_player = {
+            limit = {
+                has_game_rule = { rule = inheritance_lens_refresh_mode option = periodic }
+            }
+            trigger_event = { id = inheritance_lens.200 days = 0 }
+        }
+    }
+}

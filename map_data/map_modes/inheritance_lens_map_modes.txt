@@ -1,0 +1,28 @@
+mapmode = {
+    key = inheritance_lens_map_mode
+    name = INHERITANCE_LENS_MAP_MODE_NAME
+    desc = INHERITANCE_LENS_MAP_MODE_DESC
+    icon = "gfx/interface/icons/map_modes/inheritance_lens.dds"
+    sorting_priority = 75
+    always_shown = no
+
+    trigger = {
+        player = yes
+        has_any_title = yes
+    }
+
+    color = {
+        trigger = {
+            scope:map_mode_title = {
+                holder = {
+                    is_valid = yes
+                }
+            }
+        }
+        color = hsv { 0 0 0 }
+    }
+
+    color_pickers = {
+        inheritance_lens_map_color_picker
+    }
+}
