@@ -1,6 +1,4 @@
-namespace = inheritance_lens
-
-inheritance_lens_calculate_preview_effect = {
+﻿inheritance_lens_calculate_preview_effect = {
     # Main entry point for the Preview Succession button.
     if = {
         limit = { NOT = { has_global_variable = inheritance_lens_cache_generation } }
@@ -22,9 +20,9 @@ inheritance_lens_calculate_preview_effect = {
 
 inheritance_lens_clear_cache_effect = {
     # Clears stored predictions so the next preview recalculates.
-    clr_global_variable = inheritance_lens_cache_generation
-    every_player = { 
-        clr_character_flag = inheritance_lens_cache_ready
+    clear_global_variable = inheritance_lens_cache_generation
+    every_player = {
+        clear_character_flag = inheritance_lens_cache_ready
     }
 }
 

@@ -1,55 +1,48 @@
-scripted_gui_effect = {
-    name = PreviewSuccession
-    effect = {
-        trigger_event = { id = inheritance_lens.001 days = 0 }
-        inheritance_lens_calculate_preview_effect = yes
-    }
-}
-
-scripted_gui_effect = {
-    name = ToggleInheritanceLensPanel
-    effect = {
-        if = {
-            limit = { has_character_flag = inheritance_lens_panel_open }
-            clr_character_flag = inheritance_lens_panel_open
-        }
-        else = {
-            set_character_flag = inheritance_lens_panel_open
+scripted_gui_effects = {
+    PreviewSuccession = {
+        effect = {
+            trigger_event = { id = inheritance_lens.001 days = 0 }
+            inheritance_lens_calculate_preview_effect = yes
         }
     }
-}
 
-scripted_gui_effect = {
-    name = OpenSuccessionLawView
-    effect = { open_view = succession_law_view }
-}
+    ToggleInheritanceLensPanel = {
+        effect = {
+            if = {
+                limit = { has_character_flag = inheritance_lens_panel_open }
+                clear_character_flag = inheritance_lens_panel_open
+            }
+            else = {
+                set_character_flag = inheritance_lens_panel_open
+            }
+        }
+    }
 
-scripted_gui_effect = {
-    name = OpenElectionView
-    effect = { open_view = election_view }
-}
+    OpenSuccessionLawView = {
+        effect = { open_view = succession_law_view }
+    }
 
-scripted_gui_effect = {
-    name = OpenGrantTitleView
-    effect = { open_view = grant_title_view }
-}
+    OpenElectionView = {
+        effect = { open_view = election_view }
+    }
 
-scripted_gui_effect = {
-    name = OpenRealmView
-    effect = { open_view = realm_view }
-}
+    OpenGrantTitleView = {
+        effect = { open_view = grant_title_view }
+    }
 
-scripted_gui_effect = {
-    name = CloseInheritanceLensSettings
-    effect = { clr_character_flag = inheritance_lens_settings_open }
-}
+    OpenRealmView = {
+        effect = { open_view = realm_view }
+    }
 
-scripted_gui_effect = {
-    name = InheritanceLensMapModeEnabled
-    effect = { set_character_flag = inheritance_lens_map_mode_active }
-}
+    CloseInheritanceLensSettings = {
+        effect = { clear_character_flag = inheritance_lens_settings_open }
+    }
 
-scripted_gui_effect = {
-    name = InheritanceLensMapModeDisabled
-    effect = { clr_character_flag = inheritance_lens_map_mode_active }
+    InheritanceLensMapModeEnabled = {
+        effect = { set_character_flag = inheritance_lens_map_mode_active }
+    }
+
+    InheritanceLensMapModeDisabled = {
+        effect = { clear_character_flag = inheritance_lens_map_mode_active }
+    }
 }

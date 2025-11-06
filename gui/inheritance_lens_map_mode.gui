@@ -1,36 +1,38 @@
-containerWindowType = {
-    name = "inheritance_lens_map_legend"
-    size = { width = 330 height = 220 }
-    position = { x = 30 y = 240 }
-    moveable = yes
-    dontRender = "not ShowInheritanceLensLegend"
+guiTypes = {
+    containerWindowType = {
+        name = "inheritance_lens_map_legend"
+        size = { width = 330 height = 220 }
+        position = { x = 30 y = 240 }
+        moveable = yes
+        dontRender = "not ShowInheritanceLensLegend"
 
-    background = {
-        name = "bg"
-        spriteType = "GFX_standard_background"
-    }
+        background = {
+            name = "bg"
+            spriteType = "GFX_standard_background"
+        }
 
-    instantTextBoxType = {
-        name = "legend_header"
-        position = { x = 20 y = 20 }
-        font = "cg_16b"
-        text = "INHERITANCE_LENS_MAP_LEGEND_TITLE"
-    }
+        instantTextBoxType = {
+            name = "legend_header"
+            position = { x = 20 y = 20 }
+            font = "cg_16b"
+            text = "INHERITANCE_LENS_MAP_LEGEND_TITLE"
+        }
 
-    listboxType = {
-        name = "legend_entries"
-        position = { x = 20 y = 60 }
-        size = { width = 290 height = 140 }
-        orientation = vertical
-        spacing = 6
-    }
+        listboxType = {
+            name = "legend_entries"
+            position = { x = 20 y = 60 }
+            size = { width = 290 height = 140 }
+            orientation = vertical
+            spacing = 6
+        }
 
-    buttonType = {
-        name = "open_realm_ui"
-        position = { x = 20 y = 180 }
-        text = "INHERITANCE_LENS_OPEN_REALM"
-        clicksound = general_click
-        tooltip = "INHERITANCE_LENS_OPEN_REALM_TT"
-        on_click = "OpenRealmView"
+        buttonType = {
+            name = "open_realm_ui"
+            position = { x = 20 y = 180 }
+            text = "INHERITANCE_LENS_OPEN_REALM"
+            clicksound = general_click
+            tooltip = "INHERITANCE_LENS_OPEN_REALM_TT"
+            on_click = "OpenRealmView"
+        }
     }
 }

@@ -1,14 +1,13 @@
-scripted_gui = {
-    name = ShowInheritanceLensPanel
-    description = "Return true when the player has opened the panel"
-}
+scripted_guis = {
+    ShowInheritanceLensPanel = {
+        description = "Return true when the player has opened the panel"
+    }
 
-scripted_gui = {
-    name = ShowInheritanceLensLegend
-    description = "Legend appears when the map mode is active"
-}
+    ShowInheritanceLensLegend = {
+        description = "Legend appears when the map mode is active"
+    }
 
-scripted_gui = {
-    name = ShowInheritanceLensSettings
-    description = "Settings window toggle"
+    ShowInheritanceLensSettings = {
+        description = "Settings window toggle"
+    }
 }
