@@ -1,17 +1,15 @@
-guiTypes = {
-    windowType = {
-        name = "inheritance_lens_hud_button"
-        size = { width = 80 height = 40 }
-        position = { x = 0.88 y = 0.82 }
-        dontRender = "not IsPlayer"
+windowType = {
+    name = "inheritance_lens_hud_button"
+    size = { width = 80 height = 40 }
+    position = { x = 0.88 y = 0.82 }
+    dontRender = "not IsPlayer"
 
-        children = {
-            buttonType = {
-                name = "open_panel"
-                text = "INHERITANCE_LENS_REFRESH"
-                tooltip = "INHERITANCE_LENS_HELP_TOOLTIP"
-                on_click = "ToggleInheritanceLensPanel"
-            }
+    children = {
+        buttonType = {
+            name = "open_panel"
+            text = "INHERITANCE_LENS_REFRESH"
+            tooltip = "INHERITANCE_LENS_HELP_TOOLTIP"
+            on_click = "ToggleInheritanceLensPanel"
         }
     }
 }

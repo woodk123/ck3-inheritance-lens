@@ -7,26 +7,26 @@ character_event = {
     immediate = {
         if = {
             limit = { has_character_flag = inheritance_lens_cache_ready }
-            clr_character_flag = inheritance_lens_cache_ready
+            clear_character_flag = inheritance_lens_cache_ready
         }
-        clr_character_array = inheritance_lens_preview_entries
+        clear_character_array = inheritance_lens_preview_entries
         set_character_variable = {
             name = inheritance_lens_cache_generation_seen
             value = global_variable:inheritance_lens_cache_generation
         }
-        every_title = {
+        every_held_title = {
             limit = {
                 OR = {
-                    has_title_flag = inheritance_lens_recent_grant
-                    has_title_flag = inheritance_lens_recent_revoke
-                    has_title_flag = inheritance_lens_recent_law_change
-                    has_title_flag = inheritance_lens_recent_election_update
+                    title_has_flag = inheritance_lens_recent_grant
+                    title_has_flag = inheritance_lens_recent_revoke
+                    title_has_flag = inheritance_lens_recent_law_change
+                    title_has_flag = inheritance_lens_recent_election_update
                 }
             }
-            clr_title_flag = inheritance_lens_recent_grant
-            clr_title_flag = inheritance_lens_recent_revoke
-            clr_title_flag = inheritance_lens_recent_law_change
-            clr_title_flag = inheritance_lens_recent_election_update
+            clear_title_flag = inheritance_lens_recent_grant
+            clear_title_flag = inheritance_lens_recent_revoke
+            clear_title_flag = inheritance_lens_recent_law_change
+            clear_title_flag = inheritance_lens_recent_election_update
         }
     }
 }
@@ -50,7 +50,6 @@ character_event = {
         trigger = { always = yes }
         custom_tooltip = { text = inheritance_lens_preview_tooltip }
         hidden_effect = {
-            # Placeholder: In real implementation, evaluate succession law for scope:inheritance_lens_preview_title.
             scope:inheritance_lens_root_character = {
                 add_character_array_element = {
                     name = inheritance_lens_preview_entries

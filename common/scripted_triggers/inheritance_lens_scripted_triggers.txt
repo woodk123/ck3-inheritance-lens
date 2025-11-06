@@ -1,25 +1,27 @@
-﻿namespace = inheritance_lens
+﻿scripted_triggers = {
+    namespace = inheritance_lens
 
-inheritance_lens_is_cache_invalid_trigger = {
-    OR = {
-        NOT = { has_character_flag = inheritance_lens_cache_ready }
-        character_variable_less_than = {
-            name = inheritance_lens_cache_generation_seen
-            value = global_variable:inheritance_lens_cache_generation
+    inheritance_lens_is_cache_invalid_trigger = {
+        OR = {
+            NOT = { has_character_flag = inheritance_lens_cache_ready }
+            character_variable_is_less_than = {
+                name = inheritance_lens_cache_generation_seen
+                value = global_variable:inheritance_lens_cache_generation
+            }
         }
     }
-}
 
-inheritance_lens_is_title_relevant_trigger = {
-    tier = { value >= tier_county }
-    holder = { is_player = yes }
-}
+    inheritance_lens_is_title_relevant_trigger = {
+        tier = { value >= tier_county }
+        holder = { is_player_character = yes }
+    }
 
-inheritance_lens_tracked_change_trigger = {
-    OR = {
-        has_title_flag = inheritance_lens_recent_grant
-        has_title_flag = inheritance_lens_recent_revoke
-        has_title_flag = inheritance_lens_recent_law_change
-        has_title_flag = inheritance_lens_recent_election_update
+    inheritance_lens_tracked_change_trigger = {
+        OR = {
+            title_has_flag = inheritance_lens_recent_grant
+            title_has_flag = inheritance_lens_recent_revoke
+            title_has_flag = inheritance_lens_recent_law_change
+            title_has_flag = inheritance_lens_recent_election_update
+        }
     }
 }
