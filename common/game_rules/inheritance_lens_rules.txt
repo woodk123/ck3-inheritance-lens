@@ -1,19 +1,20 @@
-game_rule = {
-    key = inheritance_lens_refresh_mode
-    name = INHERITANCE_LENS_SETTINGS_RULE_NAME
-    desc = INHERITANCE_LENS_SETTINGS_RULE_DESC
-    group = interface
+﻿game_rules = {
+    inheritance_lens_refresh_mode = {
+        group = interface
+        name = INHERITANCE_LENS_SETTINGS_RULE_NAME
+        desc = INHERITANCE_LENS_SETTINGS_RULE_DESC
+        default = on_demand
 
-    option = {
-        key = on_demand
-        name = INHERITANCE_LENS_SETTINGS_RULE_ON_DEMAND
-        desc = INHERITANCE_LENS_SETTINGS_RULE_ON_DEMAND_DESC
-        default = yes
-    }
+        option = {
+            key = on_demand
+            name = INHERITANCE_LENS_SETTINGS_RULE_ON_DEMAND
+            desc = INHERITANCE_LENS_SETTINGS_RULE_ON_DEMAND_DESC
+        }
 
-    option = {
-        key = periodic
-        name = INHERITANCE_LENS_SETTINGS_RULE_PERIODIC
-        desc = INHERITANCE_LENS_SETTINGS_RULE_PERIODIC_DESC
+        option = {
+            key = periodic
+            name = INHERITANCE_LENS_SETTINGS_RULE_PERIODIC
+            desc = INHERITANCE_LENS_SETTINGS_RULE_PERIODIC_DESC
+        }
     }
 }

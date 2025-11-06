@@ -1,6 +1,4 @@
-namespace = inheritance_lens
-
-inheritance_lens_is_cache_invalid_trigger = {
+﻿inheritance_lens_is_cache_invalid_trigger = {
     OR = {
         NOT = { has_character_flag = inheritance_lens_cache_ready }
         character_variable_less_than = {

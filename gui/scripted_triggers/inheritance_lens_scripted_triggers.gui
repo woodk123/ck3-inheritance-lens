@@ -1,19 +1,17 @@
-scripted_gui_trigger = {
-    name = ShowInheritanceLensPanel
-    trigger = { has_character_flag = inheritance_lens_panel_open }
-}
+scripted_gui_triggers = {
+    ShowInheritanceLensPanel = {
+        trigger = { has_character_flag = inheritance_lens_panel_open }
+    }
 
-scripted_gui_trigger = {
-    name = ShowInheritanceLensLegend
-    trigger = { has_character_flag = inheritance_lens_map_mode_active }
-}
+    ShowInheritanceLensLegend = {
+        trigger = { has_character_flag = inheritance_lens_map_mode_active }
+    }
 
-scripted_gui_trigger = {
-    name = ShowInheritanceLensSettings
-    trigger = { has_character_flag = inheritance_lens_settings_open }
-}
+    ShowInheritanceLensSettings = {
+        trigger = { has_character_flag = inheritance_lens_settings_open }
+    }
 
-scripted_gui_trigger = {
-    name = IsPlayer
-    trigger = { is_player = yes }
+    IsPlayer = {
+        trigger = { is_player = yes }
+    }
 }

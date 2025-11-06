@@ -1,4 +1,4 @@
-namespace = inheritance_lens
+﻿namespace = inheritance_lens
 
 character_event = {
     id = inheritance_lens.001
@@ -7,9 +7,9 @@ character_event = {
     immediate = {
         if = {
             limit = { has_character_flag = inheritance_lens_cache_ready }
-            clr_character_flag = inheritance_lens_cache_ready
+            clear_character_flag = inheritance_lens_cache_ready
         }
-        clr_character_array = inheritance_lens_preview_entries
+        clear_character_array = inheritance_lens_preview_entries
         set_character_variable = {
             name = inheritance_lens_cache_generation_seen
             value = global_variable:inheritance_lens_cache_generation
@@ -23,10 +23,10 @@ character_event = {
                     has_title_flag = inheritance_lens_recent_election_update
                 }
             }
-            clr_title_flag = inheritance_lens_recent_grant
-            clr_title_flag = inheritance_lens_recent_revoke
-            clr_title_flag = inheritance_lens_recent_law_change
-            clr_title_flag = inheritance_lens_recent_election_update
+            clear_title_flag = inheritance_lens_recent_grant
+            clear_title_flag = inheritance_lens_recent_revoke
+            clear_title_flag = inheritance_lens_recent_law_change
+            clear_title_flag = inheritance_lens_recent_election_update
         }
     }
 }
@@ -48,7 +48,7 @@ character_event = {
     option = {
         name = inheritance_lens_preview_option
         trigger = { always = yes }
-        custom_tooltip = { text = inheritance_lens_preview_tooltip }
+        custom_tooltip = { text = INHERITANCE_LENS_PREVIEW_TOOLTIP }
         hidden_effect = {
             # Placeholder: In real implementation, evaluate succession law for scope:inheritance_lens_preview_title.
             scope:inheritance_lens_root_character = {
@@ -58,8 +58,8 @@ character_event = {
                         title = scope:inheritance_lens_preview_title
                         heir = scope:inheritance_lens_preview_title.heir
                         succession_law = scope:inheritance_lens_preview_title.active_succession_law
-                        warning_loc = inheritance_lens_preview_warning_none
-                        tooltip_loc = inheritance_lens_preview_tooltip_none
+                        warning_loc = INHERITANCE_LENS_PREVIEW_WARNING_NONE
+                        tooltip_loc = INHERITANCE_LENS_PREVIEW_TOOLTIP_NONE
                     }
                 }
             }
