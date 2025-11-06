@@ -1,50 +1,55 @@
-containerWindowType = {
-    name = "inheritance_lens_entry"
-    size = { width = 520 height = 96 }
+guiTypes = {
+    windowType = {
+        name = "inheritance_lens_entry"
+        size = { width = 520 height = 96 }
 
-    background = {
-        name = "entry_bg"
-        spriteType = "GFX_standard_frame"
-    }
+        children = {
+            quadType = {
+                name = "entry_bg"
+                spriteType = "GFX_standard_frame"
+                size = { width = 520 height = 96 }
+            }
 
-    iconType = {
-        name = "title_icon"
-        position = { x = 10 y = 10 }
-        spriteType = "GFX_title_icon"
-    }
+            iconType = {
+                name = "title_icon"
+                position = { x = 10 y = 10 }
+                spriteType = "GFX_title_icon"
+            }
 
-    instantTextBoxType = {
-        name = "title_name"
-        position = { x = 70 y = 12 }
-        text = "INHERITANCE_LENS_PREVIEW_HEADER"
-        font = "cg_18b"
-    }
+            instantTextBoxType = {
+                name = "title_name"
+                position = { x = 70 y = 12 }
+                text = "INHERITANCE_LENS_PREVIEW_HEADER"
+                font = "cg_18b"
+            }
 
-    portraitType = {
-        name = "heir_portrait"
-        position = { x = 70 y = 44 }
-        size = { width = 52 height = 52 }
-    }
+            portraitType = {
+                name = "heir_portrait"
+                position = { x = 70 y = 44 }
+                size = { width = 52 height = 52 }
+            }
 
-    instantTextBoxType = {
-        name = "heir_name"
-        position = { x = 130 y = 44 }
-        text = "INHERITANCE_LENS_PREVIEW_HEIR"
-        font = "cg_18"
-    }
+            instantTextBoxType = {
+                name = "heir_name"
+                position = { x = 130 y = 44 }
+                text = "INHERITANCE_LENS_PREVIEW_HEIR"
+                font = "cg_18"
+            }
 
-    instantTextBoxType = {
-        name = "succession_law"
-        position = { x = 330 y = 12 }
-        text = "INHERITANCE_LENS_PREVIEW_LAW"
-        font = "cg_16"
-    }
+            instantTextBoxType = {
+                name = "succession_law"
+                position = { x = 330 y = 12 }
+                text = "INHERITANCE_LENS_PREVIEW_LAW"
+                font = "cg_16"
+            }
 
-    instantTextBoxType = {
-        name = "warning"
-        position = { x = 330 y = 44 }
-        text = "INHERITANCE_LENS_PREVIEW_WARNINGS"
-        font = "cg_16"
-        tooltip = "INHERITANCE_LENS_HELP_TOOLTIP"
+            instantTextBoxType = {
+                name = "warning"
+                position = { x = 330 y = 44 }
+                text = "INHERITANCE_LENS_PREVIEW_WARNINGS"
+                font = "cg_16"
+                tooltip = "INHERITANCE_LENS_HELP_TOOLTIP"
+            }
+        }
     }
 }

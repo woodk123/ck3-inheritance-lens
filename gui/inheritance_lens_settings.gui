@@ -1,40 +1,45 @@
-containerWindowType = {
-    name = "inheritance_lens_settings"
-    size = { width = 400 height = 260 }
-    position = { x = 0.5 y = 0.5 }
-    moveable = yes
-    dontRender = "not ShowInheritanceLensSettings"
+guiTypes = {
+    windowType = {
+        name = "inheritance_lens_settings"
+        size = { width = 400 height = 260 }
+        position = { x = 0.5 y = 0.5 }
+        moveable = yes
+        dontRender = "not ShowInheritanceLensSettings"
 
-    background = {
-        name = "bg"
-        spriteType = "GFX_standard_background"
-    }
+        children = {
+            quadType = {
+                name = "settings_bg"
+                spriteType = "GFX_standard_background"
+                size = { width = 400 height = 260 }
+            }
 
-    instantTextBoxType = {
-        name = "header"
-        position = { x = 30 y = 30 }
-        font = "cg_24b"
-        text = "INHERITANCE_LENS_SETTINGS_TITLE"
-    }
+            instantTextBoxType = {
+                name = "header"
+                position = { x = 30 y = 30 }
+                font = "cg_24b"
+                text = "INHERITANCE_LENS_SETTINGS_TITLE"
+            }
 
-    dropdownType = {
-        name = "refresh_rule"
-        position = { x = 30 y = 90 }
-        size = { width = 340 height = 32 }
-        tooltip = "INHERITANCE_LENS_SETTINGS_REFRESH_TT"
-    }
+            dropdownType = {
+                name = "refresh_rule"
+                position = { x = 30 y = 90 }
+                size = { width = 340 height = 32 }
+                tooltip = "INHERITANCE_LENS_SETTINGS_REFRESH_TT"
+            }
 
-    checkboxType = {
-        name = "compact_layout"
-        position = { x = 30 y = 150 }
-        text = "INHERITANCE_LENS_SETTINGS_COMPACT"
-        tooltip = "INHERITANCE_LENS_SETTINGS_COMPACT_TT"
-    }
+            checkboxType = {
+                name = "compact_layout"
+                position = { x = 30 y = 150 }
+                text = "INHERITANCE_LENS_SETTINGS_COMPACT"
+                tooltip = "INHERITANCE_LENS_SETTINGS_COMPACT_TT"
+            }
 
-    buttonType = {
-        name = "close"
-        position = { x = 220 y = 200 }
-        text = "INHERITANCE_LENS_SETTINGS_CLOSE"
-        on_click = "CloseInheritanceLensSettings"
+            buttonType = {
+                name = "close"
+                position = { x = 220 y = 200 }
+                text = "INHERITANCE_LENS_SETTINGS_CLOSE"
+                on_click = "CloseInheritanceLensSettings"
+            }
+        }
     }
 }

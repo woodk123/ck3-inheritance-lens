@@ -1,4 +1,4 @@
-game_rule = {
+﻿game_rule = {
     key = inheritance_lens_refresh_mode
     name = INHERITANCE_LENS_SETTINGS_RULE_NAME
     desc = INHERITANCE_LENS_SETTINGS_RULE_DESC

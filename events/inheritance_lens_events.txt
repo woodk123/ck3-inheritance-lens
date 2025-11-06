@@ -1,4 +1,4 @@
-namespace = inheritance_lens
+﻿namespace = inheritance_lens
 
 character_event = {
     id = inheritance_lens.001

@@ -1,4 +1,4 @@
-namespace = inheritance_lens
+﻿namespace = inheritance_lens
 
 inheritance_lens_is_cache_invalid_trigger = {
     OR = {

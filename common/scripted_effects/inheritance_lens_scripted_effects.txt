@@ -1,4 +1,4 @@
-namespace = inheritance_lens
+﻿namespace = inheritance_lens
 
 inheritance_lens_calculate_preview_effect = {
     # Main entry point for the Preview Succession button.
